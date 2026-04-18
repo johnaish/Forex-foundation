@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forex Survival - Properties</title>
+<meta property="og:title" content="Survival Kit Properties">
+<meta property="og:description" content="Risk management and survival rules properties.">
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+   crossorigin="anonymous"></script>
+<style>
+:root {
+  --bg-primary: #0f172a;
+  --text-primary: #f1f5f9;
+  --accent: #10b981;
+  --card-bg: #1e293b;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --text-primary: #0f172a;
+    --card-bg: #e2e8f0;
+  }
+}
+body { background-color: var(--bg-primary); color: var(--text-primary); }
+.nav-active { 
+  background-color: #10b981;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+</style>
+</head>
+<body class="bg-slate-900 text-slate-100 p-6">
+<nav id="main-nav" class="mb-6 flex justify-between items-center bg-slate-800 p-4 rounded-lg shadow-lg">
+  <div class="space-x-4">
+    <a href="index.html" class="nav-link text-emerald hover:underline">Home</a>
+    <a href="basics.html" class="nav-link text-slate-300 hover:underline">Basics</a>
+    <a href="tools.html" class="nav-link text-slate-300 hover:underline">Tools</a>
+    <a href="analysis.html" class="nav-link text-slate-300 hover:underline">Analysis</a>
+    <a href="survival.html" class="nav-link text-slate-300 hover:underline nav-active">Survival</a>
+  </div>
+  <div class="flex items-center space-x-2">
+<button id="theme-toggle" class="p-2 bg-emerald rounded hover:opacity-80">🌙</button>
+    <button id="search-toggle" class="p-2 rounded hover:bg-slate-600 ml-2">🔍</button>
+    <button id="mobile-toggle" class="md:hidden p-2 text-xl">☰</button>
+  </div>
+</nav>
+
+<div id="search-bar" class="hidden mb-4 p-3 bg-slate-800 rounded-lg flex">
+  <input id="search-input" type="text" placeholder="Search survival properties (Risk, Emotions...)" class="flex-1 bg-transparent border-none focus:outline-none text-var(--text-primary)">
+  <button id="search-close" class="ml-2 text-slate-400 hover:text-white">×</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('theme-toggle');
+  const searchToggle = document.getElementById('search-toggle');
+  const searchClose = document.getElementById('search-close');
+  const searchInput = document.getElementById('search-input');
+  const searchBar = document.getElementById('search-bar');
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navLinks = document.getElementsByClassName('nav-link');
+  const current = window.location.pathname.split('/').pop() || 'index.html';
+  Array.from(navLinks).forEach(link => {
+    if (link.getAttribute('href') === current) link.classList.add('nav-active');
+  });
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    toggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+  });
+  searchToggle.addEventListener('click', () => {
+    searchBar.classList.toggle('hidden');
+  });
+  searchClose.addEventListener('click', () => {
+    searchBar.classList.add('hidden');
+  });
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase();
+    document.querySelectorAll('h1,h2,h3,h4,p,li,td').forEach(el => {
+      el.style.backgroundColor = '';
+      if (term && el.textContent.toLowerCase().includes(term)) {
+        el.style.backgroundColor = 'yellow';
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+  mobileToggle.addEventListener('click', () => {
+    const navDiv = document.querySelector('#main-nav > div:first-child');
+    navDiv.classList.toggle('hidden');
+  });
+  const progress = document.createElement('div');
+  progress.id = 'progress-bar';
+  progress.className = 'fixed top-0 left-0 h-1 bg-emerald z-50 transition-all duration-300';
+  document.body.appendChild(progress);
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    progress.style.width = scrolled + '%';
+  });
+});
+</script>
+
+<h2 class="text-3xl font-bold mb-8 text-emerald bg-gradient-to-r from-red-500 to-orange-500 text-white p-4 rounded-xl">Module 4: The Survival Kit (Risk Management) - MOST IMPORTANT</h2>
+
+<section class="space-y-6">
+  <div class="p-8 bg-red-500/10 border-4 border-red-400 rounded-2xl shadow-2xl">
+    <h3 class="text-2xl font-bold mb-6 text-emerald">The 3 Golden Rules of Risk Management</h3>
+    <ol class="space-y-6 text-xl">
+      <li>
+        <div class="flex items-start mb-4">
+          <span class="w-8 h-8 bg-gold rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 mt-1 flex-shrink-0">1</span>
+          <strong>The 1% Rule:</strong> Never risk more than <strong>1% of total account balance</strong> on a single trade.
+        </div>
+        <p>Position size = (Account Balance × Risk %) ÷ Stop Loss (pips)</p>
+      </li>
+      <li>
+        <div class="flex items-start mb-4">
+          <span class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 mt-1 flex-shrink-0">2</span>
+          <strong>Use Stop Loss (SL):</strong> Automatic order that closes trade if market moves against you.
+        </div>
+        <p>Protects from account blow-up during news events.</p>
+      </li>
+      <li>
+        <div class="flex items-start mb-4">
+          <span class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 mt-1 flex-shrink-0">3</span>
+          <strong>Risk:Reward ≥ 1:2:</strong> Risk $10 to make at least $20.
+        </div>
+        <p>Even 40% win rate profitable with good RR ratio.</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="p-6 bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
+    <h3 class="text-xl font-bold mb-3 text-emerald flex items-center">
+      <span class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center text-xs mr-3">Discipline Note</span>
+      Most beginners fail from lack of discipline, not strategy.
+    </h3>
+    <p>Follow your plan strictly. No revenge trading after losses.</p>
+  </div>
+  <div class="p-6 bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
+    <h3 class="text-xl font-bold mb-3 text-emerald flex items-center">
+      <span class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center text-xs mr-3">2</span>
+      Emotion Control
+    </h3>
+    <p>Follow plan, no revenge trading. Journal every trade.</p>
+  </div>
+  <div class="p-6 bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
+    <h3 class="text-xl font-bold mb-3 text-emerald flex items-center">
+      <span class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-xs mr-3">3</span>
+      Regulated Brokers
+    </h3>
+    <p>Check FCA, ASIC, CFTC regulation. Avoid offshore scams.</p>
+  </div>
+  <div class="p-6 bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all">
+    <h3 class="text-xl font-bold mb-3 text-emerald flex items-center">
+      <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-xs mr-3">4</span>
+      Trading Plan
+    </h3>
+    <p>Entry/exit rules, risk:reward >1:2, max daily loss.</p>
+  </div>
+</section>
+
+<p class="mt-6">Restart: <a href="basics.html" class="text-emerald">Back to Basics</a></p>
+
+<footer class="mt-10 text-sm text-slate-400 border-t pt-4">
+<p>Trading Forex carries a high level of risk.</p>
+</footer>
+</body></html>
+

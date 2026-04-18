@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Getting Started Guide - Forex Foundations</title>
+<meta property="og:title" content="Step-by-Step Forex Getting Started">
+<meta property="og:description" content="Complete beginner guide: demo, broker, small start, journal.">
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+   crossorigin="anonymous"></script>
+<style>
+:root {
+  --bg-primary: #0f172a;
+  --text-primary: #f1f5f9;
+  --accent: #10b981;
+  --card-bg: #1e293b;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --text-primary: #0f172a;
+    --card-bg: #e2e8f0;
+  }
+}
+body { background-color: var(--bg-primary); color: var(--text-primary); }
+.nav-active { 
+  background-color: #10b981;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+</style>
+</head>
+<body class="bg-slate-900 text-slate-100 p-6">
+<nav id="main-nav" class="mb-6 flex justify-between items-center bg-slate-800 p-4 rounded-lg shadow-lg">
+  <div class="space-x-3 text-sm">
+    <a href="index.html" class="nav-link text-emerald hover:underline">Home</a>
+    <a href="intro.html" class="nav-link text-slate-300 hover:underline">Intro</a>
+    <a href="basics.html" class="nav-link text-slate-300 hover:underline">Basics</a>
+    <a href="tools.html" class="nav-link text-slate-300 hover:underline">Tools</a>
+    <a href="analysis.html" class="nav-link text-slate-300 hover:underline">Analysis</a>
+    <a href="survival.html" class="nav-link text-slate-300 hover:underline">Survival</a>
+    <a href="kenya.html" class="nav-link text-slate-300 hover:underline">Kenya</a>
+    <a href="myths.html" class="nav-link text-slate-300 hover:underline">Myths</a>
+    <a href="getting-started.html" class="nav-link text-slate-300 hover:underline nav-active">Start</a>
+  </div>
+  <div class="flex items-center space-x-2">
+    <button id="theme-toggle" class="p-2 bg-emerald rounded hover:opacity-80">🌙</button>
+    <button id="search-toggle" class="p-2 rounded hover:bg-slate-600 ml-2">🔍</button>
+    <button id="mobile-toggle" class="md:hidden p-2 text-xl">☰</button>
+  </div>
+</nav>
+
+<div id="search-bar" class="hidden mb-4 p-3 bg-slate-800 rounded-lg flex">
+  <input id="search-input" type="text" placeholder="Search guide (demo, broker, journal...)" class="flex-1 bg-transparent border-none focus:outline-none text-var(--text-primary)">
+  <button id="search-close" class="ml-2 text-slate-400 hover:text-white">×</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('theme-toggle');
+  const searchToggle = document.getElementById('search-toggle');
+  const searchClose = document.getElementById('search-close');
+  const searchInput = document.getElementById('search-input');
+  const searchBar = document.getElementById('search-bar');
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navLinks = document.getElementsByClassName('nav-link');
+  const current = window.location.pathname.split('/').pop() || 'index.html';
+  Array.from(navLinks).forEach(link => {
+    if (link.getAttribute('href') === current) link.classList.add('nav-active');
+  });
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    toggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+  });
+  searchToggle.addEventListener('click', () => {
+    searchBar.classList.toggle('hidden');
+  });
+  searchClose.addEventListener('click', () => {
+    searchBar.classList.add('hidden');
+  });
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase();
+    document.querySelectorAll('h1,h2,h3,h4,p,li,td').forEach(el => {
+      el.style.backgroundColor = '';
+      if (term && el.textContent.toLowerCase().includes(term)) {
+        el.style.backgroundColor = 'yellow';
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+  mobileToggle.addEventListener('click', () => {
+    const navDiv = document.querySelector('#main-nav > div:first-child');
+    navDiv.classList.toggle('hidden');
+  });
+  const progress = document.createElement('div');
+  progress.id = 'progress-bar';
+  progress.className = 'fixed top-0 left-0 h-1 bg-emerald z-50 transition-all duration-300';
+  document.body.appendChild(progress);
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    progress.style.width = scrolled + '%';
+  });
+});
+</script>
+
+<header class="mb-12 text-center">
+  <h1 class="text-4xl font-bold mb-6 text-emerald">Module 7: Step-by-Step Getting Started Guide</h1>
+  <div class="bg-gradient-to-r from-accent to-emerald-600 text-white p-8 rounded-3xl max-w-4xl mx-auto shadow-2xl">
+    <p class="text-xl mb-4"><strong>From Zero to Live Trading in 5 Steps</strong></p>
+  </div>
+</header>
+
+<section class="max-w-4xl mx-auto space-y-8">
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="p-6 bg-slate-800 rounded-2xl shadow-xl order-1 md:order-1">
+      <h2 class="text-2xl font-bold mb-6 text-emerald">1. Educate Yourself</h2>
+      <p class="text-lg mb-4">Read every module on this site completely.</p>
+      <div class="bg-emerald-500/20 p-4 rounded-xl">
+        <strong>Complete all pages before trading</strong>
+      </div>
+    </div>
+    <div class="p-6 bg-slate-800 rounded-2xl shadow-xl order-2 md:order-2">
+      <h2 class="text-2xl font-bold mb-6 text-emerald">2. Open Demo Account</h2>
+      <p class="text-lg mb-4">Practice with "fake money" until profitable for 3 months.</p>
+      <div class="bg-blue-500/20 p-4 rounded-xl">
+        <strong>Prove strategy works</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-8 bg-slate-800 rounded-2xl shadow-xl">
+    <h2 class="text-2xl font-bold mb-6 text-emerald">3. Choose Regulated Broker</h2>
+    <p class="text-lg mb-4">CMA license, low spreads, M-Pesa support.</p>
+  </div>
+
+  <div class="p-8 bg-slate-800 rounded-2xl shadow-xl">
+    <h2 class="text-2xl font-bold mb-6 text-emerald">4. Start Small</h2>
+    <p class="text-lg mb-4">Live trading amount you can 100% afford to lose.</p>
+    <div class="bg-yellow-500/20 p-4 rounded-xl">
+      <strong>$50 micro account recommended</strong>
+    </div>
+  </div>
+
+  <div class="p-8 bg-slate-800 rounded-2xl shadow-xl">
+    <h2 class="text-2xl font-bold mb-6 text-emerald">5. Keep Trading Journal</h2>
+    <p class="text-lg">Record <strong>every trade</strong> and WHY you took it.</p>
+    <div class="grid md:grid-cols-2 gap-4 mt-4 bg-slate-700/50 p-4 rounded-xl">
+      <div><strong>Date</strong></div>
+      <div><strong>Pair</strong></div>
+      <div><strong>Entry/Exit</strong></div>
+      <div><strong>P/L</strong></div>
+      <div><strong>Reason</strong></div>
+      <div><strong>Lesson</strong></div>
+    </div>
+  </div>
+</section>
+
+<aside class="mt-12 max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+  <div class="p-6 bg-slate-800 rounded-2xl">
+    <h3 class="text-xl font-bold mb-4 text-emerald">Interactive Ideas</h3>
+    <ul class="space-y-2 text-sm">
+      <li>Daily Market News RSS</li>
+      <li>Live USD/KES ticker</li>
+      <li>Searchable Glossary</li>
+    </ul>
+  </div>
+</aside>
+
+<footer class="mt-16 text-sm text-slate-400 border-t pt-6 text-center">
+<p>Start your Forex journey today. Risk only what you can lose. 🇰🇪</p>
+</footer>
+</body></html>
+

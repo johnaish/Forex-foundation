@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forex Basics - Properties</title>
+<meta property="og:title" content="Forex Basics Properties">
+<meta property="og:description" content="Key properties of currency pairs, pips, lots.">
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+   crossorigin="anonymous"></script>
+<style>
+:root {
+  --bg-primary: #0f172a;
+  --text-primary: #f1f5f9;
+  --accent: #10b981;
+  --card-bg: #1e293b;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f8fafc;
+    --text-primary: #0f172a;
+    --card-bg: #e2e8f0;
+  }
+}
+body { background-color: var(--bg-primary); color: var(--text-primary); }
+.nav-active { 
+  background-color: #10b981;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+</style>
+</head>
+<body class="bg-slate-900 text-slate-100 p-6">
+<nav id="main-nav" class="mb-6 flex justify-between items-center bg-slate-800 p-4 rounded-lg shadow-lg">
+  <div class="space-x-2 text-sm md:space-x-4">
+    <a href="index.html" class="nav-link text-emerald hover:underline">Home</a>
+    <a href="intro.html" class="nav-link text-slate-300 hover:underline">Intro</a>
+    <a href="basics.html" class="nav-link text-slate-300 hover:underline nav-active">Basics</a>
+    <a href="leverage.html" class="nav-link text-slate-300 hover:underline">Leverage</a>
+    <a href="tools.html" class="nav-link text-slate-300 hover:underline">Tools</a>
+    <a href="analysis.html" class="nav-link text-slate-300 hover:underline">Analysis</a>
+    <a href="survival.html" class="nav-link text-slate-300 hover:underline">Survival</a>
+    <a href="kenya.html" class="nav-link text-slate-300 hover:underline">Kenya</a>
+    <a href="myths.html" class="nav-link text-slate-300 hover:underline">Myths</a>
+    <a href="getting-started.html" class="nav-link text-slate-300 hover:underline">Start</a>
+  </div>
+  <div class="flex items-center space-x-2">
+    <button id="theme-toggle" class="p-2 bg-emerald rounded hover:opacity-80">🌙</button>
+    <button id="search-toggle" class="p-2 rounded hover:bg-slate-600 ml-2">🔍</button>
+    <button id="mobile-toggle" class="md:hidden p-2 text-xl">☰</button>
+  </div>
+</nav>
+
+<div id="search-bar" class="hidden mb-4 p-3 bg-slate-800 rounded-lg flex">
+  <input id="search-input" type="text" placeholder="Search properties (Pips, RSI, Pairs...)" class="flex-1 bg-transparent border-none focus:outline-none text-slate-100">
+
+  <button id="search-close" class="ml-2 text-slate-400 hover:text-white">×</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('theme-toggle');
+  const searchToggle = document.getElementById('search-toggle');
+  const searchClose = document.getElementById('search-close');
+  const searchInput = document.getElementById('search-input');
+  const searchBar = document.getElementById('search-bar');
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navLinks = document.getElementsByClassName('nav-link');
+  const current = window.location.pathname.split('/').pop() || 'index.html';
+  Array.from(navLinks).forEach(link => {
+    if (link.getAttribute('href') === current) link.classList.add('nav-active');
+  });
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    toggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+  });
+  searchToggle.addEventListener('click', () => {
+    searchBar.classList.toggle('hidden');
+  });
+  searchClose.addEventListener('click', () => {
+    searchBar.classList.add('hidden');
+  });
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase();
+    document.querySelectorAll('h1,h2,h3,h4,p,li,td').forEach(el => {
+      el.style.backgroundColor = '';
+      if (term && el.textContent.toLowerCase().includes(term)) {
+        el.style.backgroundColor = 'yellow';
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+  mobileToggle.addEventListener('click', () => {
+    const navDiv = document.querySelector('#main-nav > div:first-child');
+    navDiv.classList.toggle('hidden');
+  });
+  const progress = document.createElement('div');
+  progress.id = 'progress-bar';
+  progress.className = 'fixed top-0 left-0 h-1 bg-emerald z-50 transition-all duration-300';
+  document.body.appendChild(progress);
+  window.addEventListener('scroll', () => {
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    progress.style.width = scrolled + '%';
+  });
+});
+</script>
+
+<h2 class="text-2xl font-bold mb-4">Forex Basics</h2>
+<p class="mb-4">Forex trading involves buying one currency and selling another.</p>
+
+<!-- AdSense Ad Unit -->
+<div class="my-8 p-4 bg-slate-700/30 rounded-lg">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<section id="css-props" class="mb-8 p-6 bg-slate-800 rounded-xl">
+  <h3 class="text-2xl font-bold mb-4 text-emerald">CSS Properties Used</h3>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div>
+      <h4 class="font-bold">Custom Variables</h4>
+      <ul class="list-disc ml-4 text-sm">
+        <li>--bg-primary: slate dark/light</li>
+        <li>--accent: emerald green</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold">Tailwind Features</h4>
+      <ul class="list-disc ml-4 text-sm">
+        <li>Responsive grids</li>
+        <li>Hover transitions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<h3 class="text-2xl font-bold mb-6">Key Forex Properties</h3>
+
+<div class="space-y-8">
+  <div class="p-6 bg-slate-800 rounded-xl">
+    <h4 class="text-xl font-bold mb-4 text-emerald">Currency Pairs Properties</h4>
+    <p>EUR/USD: Euro vs US Dollar (most liquid).</p>
+    <table class="w-full mt-4 border-collapse border border-slate-600">
+      <thead><tr class="bg-slate-700"><th class="p-2 border">Type</th><th class="p-2 border">Examples</th></tr></thead>
+      <tbody>
+        <tr><td class="p-2 border">Majors</td><td class="p-2 border">EUR/USD, GBP/USD</td></tr>
+        <tr><td class="p-2 border">Minors</td><td class="p-2 border">EUR/GBP, AUD/JPY</td></tr>
+        <tr><td class="p-2 border">Exotics</td><td class="p-2 border">USD/TRY, EUR/ZAR</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="p-6 bg-slate-800 rounded-xl">
+    <h4 class="text-xl font-bold mb-4 text-emerald">Pips Properties</h4>
+    <p>The smallest price move, usually 0.0001 for most pairs.</p>
+    <table class="w-full mt-4 border-collapse border border-slate-600">
+      <thead><tr class="bg-slate-700"><th class="p-2 border">Pair</th><th class="p-2 border">Pip Value</th></tr></thead>
+      <tbody>
+        <tr><td class="p-2 border">EUR/USD</td><td class="p-2 border">0.0001</td></tr>
+        <tr><td class="p-2 border">USD/JPY</td><td class="p-2 border">0.01</td></tr>
+      </tbody>
+    </table>
+    <p class="mt-2 text-sm">Example: EUR/USD from 1.1000 to 1.1001 = 1 pip.</p>
+  </div>
+
+  <div class="p-6 bg-slate-800 rounded-xl">
+    <h4 class="text-xl font-bold mb-4 text-emerald">Lots Properties</h4>
+    <table class="w-full mt-4 border-collapse border border-slate-600">
+      <thead><tr class="bg-slate-700"><th class="p-2 border">Type</th><th class="p-2 border">Units</th><th class="p-2 border">For Beginners</th></tr></thead>
+      <tbody>
+        <tr><td class="p-2 border">Standard</td><td class="p-2 border">100,000</td><td class="p-2 border">Avoid</td></tr>
+        <tr><td class="p-2 border">Mini</td><td class="p-2 border">10,000</td><td class="p-2 border">OK</td></tr>
+        <tr><td class="p-2 border">Micro</td><td class="p-2 border">1,000</td><td class="p-2 border">Recommended</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="p-6 bg-orange-500/10 border-2 border-orange-400 rounded-xl">
+    <h4 class="text-xl font-bold mb-4 text-emerald flex items-center">
+      Leverage: Double-Edged Sword ⚔️ <a href="leverage.html" class="ml-2 text-sm underline">(Full Guide)</a>
+    </h4>
+    <p>Control large positions with small margin. Formula: <code>Position / Margin = Leverage</code></p>
+    <p class="mt-2 text-sm italic">Example: $10k position with $100 margin = 1:100 leverage</p>
+  </div>
+</div>
+
+<p class="mt-6">Next: <a href="tools.html" class="text-emerald">Go to Tools →</a></p>
+
+<footer class="mt-10 text-sm text-slate-400 border-t pt-4">
+<p>Trading Forex carries a high level of risk.</p>
+</footer>
+</body></html>
+

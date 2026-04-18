@@ -1,0 +1,1346 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn Forex trading fundamentals for Kenyan beginners. Understand currency pairs, risk management, and broker safety with realistic, no-hype education.">
+  <meta name="keywords" content="Forex for beginners Kenya, Forex trading basics Kenya, learn Forex trading, CMA licensed brokers Kenya, M-Pesa Forex funding">
+  <meta property="og:title" content="Forex Foundations Kenya — Master the Markets with Logic, Not Luck">
+  <meta property="og:description" content="Professional Forex education for Kenyan beginners. Learn risk management, technical analysis, and how to verify CMA-licensed brokers.">
+  <meta property="og:type" content="website">
+  <title>Forex Foundations Kenya — Master the Markets with Logic, Not Luck</title>
+
+
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#0f172a',
+            emerald: '#10b981'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
+
+
+
+  <style>
+    /* [existing styles from feedback file] */
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a 0%, #1a2850 100%);
+      min-height: 100vh;
+    }
+
+    /* === ANIMATIONS === */
+    @keyframes fadeInUp { 
+      from { opacity: 0; transform: translateY(30px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.6); }
+    }
+    @keyframes pulse-slow {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+    .animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
+    .animate-slide-in-right { animation: slideInRight 0.8s ease-out forwards; }
+    .animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
+    .animate-delay-5 { animation-delay: 0.5s; opacity: 0; }
+    .animate-glow { animation: glow 3s ease-in-out infinite; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+
+    /* === NAVBAR === */
+    #navbar {
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar-scrolled { 
+      background-color: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* === BUTTONS === */
+    .btn-primary {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+    }
+
+    /* === CARDS === */
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(16, 185, 129, 0.1);
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(10px);
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      border-color: rgba(16, 185, 129, 0.5);
+      box-shadow: 0 25px 50px rgba(16, 185, 129, 0.15), 0 10px 25px rgba(0, 0, 0, 0.3);
+      background: rgba(30, 41, 59, 0.8);
+    }
+
+    /* === TEXT GRADIENTS === */
+    .gradient-text {
+      background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #059669 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .text-gradient-secondary {
+      background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* === HERO SECTION === */
+    .hero-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #34d399;
+      margin-bottom: 2rem;
+      animation: fadeInDown 0.8s ease-out forwards;
+    }
+
+    .hero-title {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .hero-subtitle {
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .hero-cta {
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.4s;
+      opacity: 0;
+    }
+
+    /* === BACKGROUND EFFECTS === */
+    .grid-bg {
+      background-image: 
+        linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.02));
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    .orb-1 {
+      width: 400px;
+      height: 400px;
+      top: -100px;
+      right: -100px;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .orb-2 {
+      width: 300px;
+      height: 300px;
+      bottom: 100px;
+      left: -100px;
+      animation: float 10s ease-in-out infinite;
+      animation-delay: 2s;
+    }
+
+    /* === SECTION HIGHLIGHTS === */
+    .section-highlight {
+      position: relative;
+      padding: 1rem;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.02) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    .section-highlight:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 100%);
+    }
+
+    /* === STAT BOXES === */
+    .stat-box {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 1rem;
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(16, 185, 129, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .stat-box:hover {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: rgba(30, 41, 59, 0.9);
+      transform: translateY(-4px);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* === BACK TO TOP === */
+    .back-to-top {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* === FOCUS STATES === */
+    input:focus, select:focus {
+      outline: none;
+      border-color: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+
+    /* === SCROLLBAR === */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(16, 185, 129, 0.5);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(16, 185, 129, 0.8);
+    }
+    
+    /* Typing animation */
+    .typing-cursor { border-left: 2px solid #10b981; animation: blink 1s infinite; }
+    @keyframes blink { 0%, 50% { border-color: transparent; } 51%, 100% { border-color: #10b981; } }
+  </style>
+
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased" style="background: linear-gradient(135deg, #0f172a 0%, #1a2850 100%);">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-2 group">
+          <svg class="w-8 h-8 text-emerald transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+          <span class="text-xl font-bold text-slate-50">Forex <span class="text-emerald">Foundations</span></span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#roadmap" class="text-slate-300 hover:text-emerald transition-colors text-sm font-medium">Roadmap</a>
+          <a href="#calculator" class="text-slate-300 hover:text-emerald transition-colors text-sm font-medium">Calculator</a>
+          <a href="#kenya-desk" class="text-slate-300 hover:text-emerald transition-colors text-sm font-medium">Kenya Desk</a>
+          <a href="kenya.html" class="text-slate-300 hover:text-emerald transition-colors text-sm font-medium">Full Guide</a>
+          <a href="#newsletter" class="px-4 py-2 bg-emerald text-white rounded-lg text-sm font-semibold hover:bg-emerald-600 transition-colors">
+            Get Updates
+          </a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-emerald transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#roadmap" class="block text-slate-300 hover:text-emerald">Roadmap</a>
+        <a href="#calculator" class="block text-slate-300 hover:text-emerald">Calculator</a>
+        <a href="#kenya-desk" class="block text-slate-300 hover:text-emerald">Kenya Desk</a>
+        <a href="kenya.html" class="block text-slate-300 hover:text-emerald">Full Guide</a>
+        <a href="#newsletter" class="block px-4 py-2 bg-emerald text-white rounded-lg text-center hover:bg-emerald-600">
+          Get Updates
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Enhanced Hero with Forex Elements -->
+  <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <!-- Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    
+    <!-- Ticker Bar -->
+    <div class="absolute top-8 left-1/2 transform -translate-x-1/2 bg-emerald/10 backdrop-blur-xl border border-emerald/30 px-6 py-3 rounded-full text-xs font-mono text-emerald animate-pulse z-10 shadow-xl shadow-emerald/20">
+      <span>📊 Live Markets: EUR/USD 1.0852 | GBP/USD 1.2745 | USD/JPY 149.30</span>
+    </div>
+    
+    <div class="relative max-w-5xl mx-auto text-center z-20">
+      <!-- Badge -->
+      <div class="hero-badge animate-fade-in-down">
+        ✨ Professional Forex Foundations • No Hype, Pure Logic
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero-title text-6xl sm:text-7xl lg:text-8xl font-black text-slate-50 mb-8 leading-tight">
+        Master the Markets with <span class="gradient-text">Logic, Not Luck</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-subtitle text-xl sm:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+        Most traders fail because they skip the fundamentals. Learn how global money actually flows, why prices move, and what institutions really control. Perfect for Kenyan traders.
+      </p>
+
+      <!-- Stats Counters -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 max-w-3xl mx-auto">
+        <div class="stat-box animate-fade-in-up animate-delay-1">
+          <p class="stat-number">10</p>
+          <p class="text-slate-300 text-sm mt-2">Core Principles</p>
+          <p class="text-slate-500 text-xs mt-1">Deep foundations</p>
+        </div>
+        <div class="stat-box animate-fade-in-up animate-delay-2">
+          <p class="stat-number">4</p>
+          <p class="text-slate-300 text-sm mt-2">Market Drivers</p>
+          <p class="text-slate-500 text-xs mt-1">Why prices move</p>
+        </div>
+        <div class="stat-box animate-fade-in-up animate-delay-3">
+          <p class="stat-number">100%</p>
+          <p class="text-slate-300 text-sm mt-2">Risk Focused</p>
+          <p class="text-slate-500 text-xs mt-1">Capital preservation first</p>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="hero-cta flex flex-col sm:flex-row gap-6 justify-center mt-8 mb-16">
+        <a href="#foundations" class="btn-primary px-8 py-4 text-white rounded-lg font-bold text-lg inline-flex items-center justify-center group">
+          Explore Deep Breakdown
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
+        <a href="basics.html" class="px-8 py-4 border-2 border-emerald text-emerald rounded-lg font-bold text-lg hover:bg-emerald/10 inline-flex items-center justify-center transition-all">
+          Start Learning
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h2M9 5a2 2 0 012-2h2a2 2 0 012 2m0 0V19a2 2 0 01-2 2h-2a2 2 0 01-2-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+    </div>
+  </section>
+
+
+  <!-- Trust Bar -->
+  <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-900 border-y border-slate-700">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 items-center text-center md:text-left">
+        <div class="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+          <svg class="w-12 h-12 text-emerald mx-auto md:mx-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L13.09 8.26L22 9.27L17 14.14L18.18 21L12 17.77L5.82 21L7 14.14L2 9.27L10.91 8.26L12 2Z"/>
+          </svg>
+          <div>
+            <h3 class="text-lg font-bold text-slate-100">Trusted Guide</h3>
+            <p class="text-sm text-slate-400">10K+ Kenyan Traders</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+          <div class="w-12 h-12 bg-emerald/20 rounded-xl flex items-center justify-center mx-auto md:mx-0">
+            <span class="text-2xl">🇰🇪</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-slate-100">CMA Verified</h3>
+            <p class="text-sm text-slate-400">Kenya Brokers Only</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+          <svg class="w-12 h-12 text-green-400 mx-auto md:mx-0" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <div>
+            <h3 class="text-lg font-bold text-slate-100">No-Hype</h3>
+            <p class="text-sm text-slate-400">Real Risk Education</p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+          <svg class="w-12 h-12 text-blue-400 mx-auto md:mx-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          <div>
+            <h3 class="text-lg font-bold text-slate-100">M-Pesa Ready</h3>
+            <p class="text-sm text-slate-400">Local Funding Guide</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AdSense Ad Unit 1 -->
+  <section class="py-8 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+    <div class="max-w-5xl mx-auto">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"
+           data-ad-format="horizontal"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </section>
+
+  <!-- Key Insights Cards -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-slate-50 mb-4">4 Critical Truths About Forex</h2>
+        <p class="text-xl text-slate-300 max-w-2xl mx-auto">What you need to know before your first trade</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="section-highlight group hover:shadow-xl hover:shadow-emerald/10 transition-all duration-300">
+          <div class="flex items-start">
+            <div class="text-3xl mr-4">💱</div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-emerald transition-colors">It's About Relative Value</h3>
+              <p class="text-slate-400 text-sm">You never trade one currency in isolation. EUR/USD = buying Euro strength while shorting USD weakness. Understand both sides.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-highlight group hover:shadow-xl hover:shadow-emerald/10 transition-all duration-300">
+          <div class="flex items-start">
+            <div class="text-3xl mr-4">🏦</div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-emerald transition-colors">Institutions Control Volume</h3>
+              <p class="text-slate-400 text-sm">Central banks and mega-banks move markets. Retail traders provide liquidity. Know your position in the hierarchy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-highlight group hover:shadow-xl hover:shadow-emerald/10 transition-all duration-300">
+          <div class="flex items-start">
+            <div class="text-3xl mr-4">📊</div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-emerald transition-colors">Interest Rates Are #1</h3>
+              <p class="text-slate-400 text-sm">Money flows where returns are highest. Central bank policy beats technical analysis every single time. Track policy, not patterns.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-highlight group hover:shadow-xl hover:shadow-emerald/10 transition-all duration-300">
+          <div class="flex items-start">
+            <div class="text-3xl mr-4">⚖️</div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-slate-100 mb-2 group-hover:text-emerald transition-colors">Risk Management is Everything</h3>
+              <p class="text-slate-400 text-sm">A single bad trade shouldn't hurt. Risk 1-2% max per trade. Compound your wins over months and years, not days.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, rgba(16,185,129,0.03) 0%, rgba(5,150,105,0.03) 100%);">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-slate-50 mb-4 flex items-center justify-center">
+          Your 💱 Learning Roadmap
+        </h2>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto">Click to master each foundation step-by-step</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="basics.html" class="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-emerald/50 rounded-2xl p-8 card-hover hover:scale-[1.02] transition-all duration-300 overflow-hidden">
+          <div class="absolute top-4 right-4 opacity-80">
+            <svg class="w-12 h-12 text-emerald/50 group-hover:text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-100 mb-4 group-hover:text-emerald transition-colors">01 Basics</h3>
+          <p class="text-slate-400 mb-6">Pips, Lots, Pairs 📊</p>
+          <div class="flex items-center text-emerald font-semibold">
+            Learn Now →
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+        <a href="leverage.html" class="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-emerald/50 rounded-2xl p-8 card-hover hover:scale-[1.02] transition-all duration-300 overflow-hidden">
+          <div class="absolute top-4 right-4 opacity-80">
+            <svg class="w-12 h-12 text-orange-400/50 group-hover:text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-100 mb-4 group-hover:text-orange-400 transition-colors">02 Leverage</h3>
+          <p class="text-slate-400 mb-6">Risk Control ⚖️</p>
+          <div class="flex items-center text-emerald font-semibold">
+            Risk Guide →
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+        <a href="kenya.html" class="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-emerald/50 rounded-2xl p-8 card-hover hover:scale-[1.02] transition-all duration-300 overflow-hidden">
+          <div class="absolute top-4 right-4 opacity-80">
+            <span class="text-3xl group-hover:scale-110 transition-transform">🇰🇪</span>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-100 mb-4 group-hover:text-emerald transition-colors">03 Kenya Guide</h3>
+          <p class="text-slate-400 mb-6">CMA Brokers 💳</p>
+          <div class="flex items-center text-emerald font-semibold">
+            Local Setup →
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+        <a href="getting-started.html" class="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-emerald/50 rounded-2xl p-8 card-hover hover:scale-[1.02] transition-all duration-300 overflow-hidden">
+          <div class="absolute top-4 right-4 opacity-80">
+            <svg class="w-12 h-12 text-blue-400/50 group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-100 mb-4 group-hover:text-blue-400 transition-colors">04 Get Started</h3>
+          <p class="text-slate-400 mb-6">First Trades 🚀</p>
+          <div class="flex items-center text-emerald font-semibold">
+            Begin Now →
+            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Features Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-b from-emerald/5 to-transparent"></div>
+    
+    <div class="relative max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl sm:text-5xl font-bold text-slate-50 mb-4">Why Most Traders Fail (And How You Won't)</h2>
+        <p class="text-xl text-slate-300 max-w-2xl mx-auto">The difference between sustainable trading and account wipeouts</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Fail Path -->
+        <div class="section-highlight relative">
+          <div class="absolute top-0 left-0 w-1 h-full bg-red-500 rounded-l"></div>
+          <div class="pl-6">
+            <h3 class="text-2xl font-bold text-red-400 mb-4">❌ The Failure Path</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-red-400 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Jump into "strategies" before understanding basics</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-red-400 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Trade without understanding market structure</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-red-400 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Use high leverage without risk management</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-red-400 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Follow signals without understanding mechanics</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-red-400 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Lose accounts to overtrading and emotions</span>
+              </li>
+            </ul>
+            <p class="mt-6 text-red-400 font-semibold">Result: 95% of retail traders lose money</p>
+          </div>
+        </div>
+
+        <!-- Win Path -->
+        <div class="section-highlight relative border-emerald/50">
+          <div class="absolute top-0 left-0 w-1 h-full bg-emerald rounded-l"></div>
+          <div class="pl-6">
+            <h3 class="text-2xl font-bold text-emerald mb-4">✅ The Winner's Path</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-emerald mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Master macro fundamentals first</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-emerald mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Understand liquidity and market structure</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-emerald mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Risk 1-2% per trade maximum</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-emerald mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Trade with clear entry/exit rules</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-emerald mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span class="text-slate-300">Know when NOT to trade</span>
+              </li>
+            </ul>
+            <p class="mt-6 text-emerald font-semibold">Result: Consistent, sustainable growth</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="mt-12 text-center">
+        <p class="text-slate-400 mb-6">Start building the right foundation today</p>
+        <a href="#foundations" class="btn-primary px-8 py-4 text-white rounded-lg font-bold text-lg inline-flex items-center justify-center group">
+          Read the Deep Breakdown Now
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content: Deep Breakdown -->
+  <section id="foundations" class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto space-y-16">
+
+
+      <!-- Section 1: What Forex Actually Is -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">1. What Forex Actually Is</h2>
+        <p class="text-slate-300 text-lg">Forex (foreign exchange) is the <span class="text-emerald font-semibold">global system for pricing money relative to other money</span>.</p>
+        <p class="text-slate-300">When you see EUR/USD = 1.10, that's not just a number—it's a <span class="text-emerald font-semibold">live reflection of economic strength, capital flows, interest rates, risk sentiment, and speculation</span>.</p>
+        
+        <div class="bg-slate-800 border-l-4 border-emerald p-6 rounded">
+          <p class="text-slate-100 font-semibold mb-2">Core Truth:</p>
+          <p class="text-slate-300">Currencies are not assets like stocks. They are <span class="text-emerald">relative valuations between economies</span>.</p>
+          <p class="text-slate-300 mt-3">You are never buying "EUR" alone—you are always:</p>
+          <p class="text-emerald text-lg font-semibold mt-3">Buying one economy while shorting another.</p>
+        </div>
+      </div>
+
+      <!-- Section 2: Real Drivers -->
+      <div class="space-y-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">2. The Real Drivers of Currency Value</h2>
+        <p class="text-slate-300 text-lg">Most beginners think price moves randomly or based on indicators. That's wrong. Currencies move due to <span class="text-emerald font-semibold">four primary forces</span>:</p>
+        
+        <!-- Driver A: Interest Rates -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-emerald">A. Interest Rates (The #1 Driver)</h3>
+          <p class="text-slate-300">Central banks control interest rates through the Federal Reserve, European Central Bank, and others.</p>
+          <div class="bg-slate-800 p-4 rounded space-y-3">
+            <p class="text-slate-200"><span class="text-emerald font-semibold">Higher interest rates</span> → attract capital → currency strengthens</p>
+            <p class="text-slate-200"><span class="text-emerald font-semibold">Lower rates</span> → capital leaves → currency weakens</p>
+          </div>
+          <p class="text-slate-400 italic">Big institutions move money where returns are highest. This is called <span class="text-emerald">capital flow</span>.</p>
+        </div>
+
+        <!-- Driver B: Inflation -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-emerald">B. Inflation</h3>
+          <p class="text-slate-300">If a country's inflation is high, its currency loses purchasing power and investors avoid holding it long-term.</p>
+          <div class="bg-slate-800 border-l-4 border-yellow-500 p-4 rounded">
+            <p class="text-slate-100 font-semibold mb-2">The Nuance Beginners Miss:</p>
+            <p class="text-slate-300">Markets don't react to inflation itself—they react to <span class="text-emerald font-semibold">how central banks respond to it</span>.</p>
+          </div>
+        </div>
+
+        <!-- Driver C: Economic Strength -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-emerald">C. Economic Strength</h3>
+          <p class="text-slate-300">Measured by GDP growth, employment, and trade balance.</p>
+          <div class="bg-slate-800 p-4 rounded space-y-3">
+            <p class="text-slate-200"><span class="text-emerald font-semibold">Strong economy</span> → strong currency</p>
+            <p class="text-slate-200"><span class="text-emerald font-semibold">Weak economy</span> → weak currency</p>
+          </div>
+          <p class="text-slate-400 italic">It's not the data—it's whether the data is <span class="text-emerald font-semibold">better or worse than expectations</span>.</p>
+        </div>
+
+        <!-- Driver D: Market Sentiment -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-emerald">D. Market Sentiment (Risk-On vs Risk-Off)</h3>
+          <p class="text-slate-300">This is where most retail traders get destroyed.</p>
+          <div class="bg-slate-800 p-4 rounded space-y-3">
+            <p class="text-slate-200"><span class="text-emerald font-semibold">Risk-on:</span> Investors take risks → buy currencies like AUD, GBP</p>
+            <p class="text-slate-200"><span class="text-emerald font-semibold">Risk-off:</span> Investors panic → move into "safe havens" like USD, JPY</p>
+          </div>
+          <div class="bg-red-900/30 border border-red-400 p-4 rounded mt-4">
+            <p class="text-slate-200">Bad news = currency goes up</p>
+            <p class="text-slate-200">Good news = currency drops</p>
+            <p class="text-slate-300 text-sm mt-2">Because it's about <span class="text-emerald">global positioning</span>, not logic.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Market Structure -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">3. Market Structure (Who You're Really Trading Against)</h2>
+        <p class="text-slate-300 text-lg">Forex is not a level playing field.</p>
+        
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-slate-200 mb-4">The Hierarchy:</h3>
+          <div class="space-y-3">
+            <div class="bg-slate-800 p-4 rounded border-l-4 border-emerald">
+              <p class="text-emerald font-bold text-lg">1. Central Banks</p>
+              <p class="text-slate-300 text-sm mt-1">Move markets long-term • Control liquidity</p>
+            </div>
+            <div class="bg-slate-800 p-4 rounded border-l-4 border-blue-400">
+              <p class="text-blue-400 font-bold text-lg">2. Institutional Players</p>
+              <p class="text-slate-300 text-sm mt-1">Banks (JP Morgan, Citi) • Hedge funds • They control volume</p>
+            </div>
+            <div class="bg-slate-800 p-4 rounded border-l-4 border-orange-400">
+              <p class="text-orange-400 font-bold text-lg">3. Retail Traders (You)</p>
+              <p class="text-slate-300 text-sm mt-1">Provide liquidity • Often get trapped</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-red-900/30 border border-red-400 p-6 rounded mt-6">
+          <p class="text-slate-100 font-bold mb-2">Brutal Reality:</p>
+          <p class="text-slate-300">Retail traders don't move the market.</p>
+          <p class="text-slate-300">They get positioned <span class="text-emerald font-semibold">by the market</span>.</p>
+        </div>
+      </div>
+
+      <!-- Section 4: Liquidity -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">4. Liquidity and Why Price Moves</h2>
+        <p class="text-slate-300 text-lg">Price moves because of <span class="text-emerald font-semibold">imbalance between buyers and sellers</span>. Not indicators. Not patterns.</p>
+        
+        <div class="bg-slate-800 border-l-4 border-emerald p-6 rounded">
+          <p class="text-slate-100 font-semibold mb-3">Key Concept:</p>
+          <p class="text-emerald text-lg font-semibold">Price moves to where liquidity exists.</p>
+          <p class="text-slate-300 text-sm mt-3">Liquidity = clusters of orders (stop losses, pending orders)</p>
+        </div>
+
+        <div class="space-y-3 mt-6">
+          <p class="text-slate-300">Institutions push price toward these zones to:</p>
+          <ul class="space-y-2 ml-4">
+            <li class="text-slate-300">• Fill large orders</li>
+            <li class="text-slate-300">• Trigger stops (which become market orders)</li>
+          </ul>
+        </div>
+
+        <div class="bg-yellow-900/30 border border-yellow-600 p-4 rounded mt-4 space-y-2">
+          <p class="text-slate-200">This is why:</p>
+          <p class="text-slate-300">• Breakouts often fail</p>
+          <p class="text-slate-300">• Stop losses get "hunted"</p>
+        </div>
+      </div>
+
+      <!-- Section 5: Currency Pairs -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">5. Currency Pairs: Structure and Meaning</h2>
+        <p class="text-slate-300">Example: EUR/USD</p>
+        
+        <div class="bg-slate-800 p-4 rounded space-y-2 mb-4">
+          <p class="text-slate-200"><span class="text-emerald font-semibold">EUR</span> = base currency</p>
+          <p class="text-slate-200"><span class="text-emerald font-semibold">USD</span> = quote currency</p>
+        </div>
+
+        <p class="text-slate-300">If EUR/USD rises → Euro is gaining strength relative to USD</p>
+
+        <div class="bg-slate-800 border-l-4 border-emerald p-6 rounded mt-6">
+          <p class="text-slate-100 font-semibold mb-3">Critical Insight:</p>
+          <p class="text-emerald font-semibold text-lg">A pair moves because of BOTH currencies, not just one.</p>
+          <p class="text-slate-300 text-sm mt-3">EUR/USD can go up because:</p>
+          <p class="text-slate-300 text-sm">• EUR is strong OR</p>
+          <p class="text-slate-300 text-sm">• USD is weak</p>
+          <p class="text-slate-300 text-sm mt-3">You must always ask: <span class="text-emerald font-semibold">Which side is driving the move?</span></p>
+        </div>
+      </div>
+
+      <!-- Section 6: Timeframes -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">6. Timeframes: The Hidden Trap</h2>
+        <p class="text-slate-300">Most traders mix timeframes incorrectly.</p>
+        
+        <div class="space-y-4 mt-6">
+          <div class="bg-slate-800 p-4 rounded">
+            <p class="text-slate-200"><span class="text-emerald font-semibold">Higher timeframes</span> (daily, weekly) = macro direction</p>
+          </div>
+          <div class="bg-slate-800 p-4 rounded">
+            <p class="text-slate-200"><span class="text-emerald font-semibold">Lower timeframes</span> (minutes) = noise + execution</p>
+          </div>
+        </div>
+
+        <div class="bg-blue-900/30 border border-blue-400 p-4 rounded mt-6">
+          <p class="text-slate-100 font-semibold mb-3">Beginners:</p>
+          <p class="text-slate-300">• Trade on 5-min charts • Ignore macro drivers</p>
+        </div>
+
+        <div class="bg-green-900/30 border border-emerald p-4 rounded">
+          <p class="text-slate-100 font-semibold mb-3">Professionals:</p>
+          <p class="text-slate-300">• Align with higher timeframe bias • Use lower timeframe for entry only</p>
+        </div>
+      </div>
+
+      <!-- Section 7: Technical Analysis -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">7. Technical Analysis vs Reality</h2>
+        <p class="text-slate-300">Indicators are <span class="text-emerald font-semibold">lagging tools</span>. They don't cause price. They summarize past data.</p>
+        
+        <div class="bg-red-900/30 border border-red-400 p-6 rounded mt-6">
+          <p class="text-slate-100 font-semibold mb-4">The Problem:</p>
+          <p class="text-slate-300 mb-3">Most strategies:</p>
+          <ul class="space-y-2 ml-4 text-slate-300">
+            <li>• Use RSI, MACD, moving averages</li>
+            <li>• Ignore liquidity and fundamentals</li>
+          </ul>
+          <p class="text-slate-300 mt-4">This leads to:</p>
+          <ul class="space-y-2 ml-4 text-slate-300">
+            <li>• Late entries</li>
+            <li>• False signals</li>
+            <li>• Overtrading</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 8: Leverage -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">8. Leverage: The Silent Killer</h2>
+        <p class="text-slate-300">Forex brokers offer leverage like 1:100 or 1:500. Sounds powerful. It's dangerous.</p>
+        
+        <div class="bg-red-900/30 border border-red-400 p-6 rounded mt-6">
+          <p class="text-slate-100 font-semibold mb-4">Why Traders Blow Accounts:</p>
+          <ul class="space-y-2 text-slate-300">
+            <li>• Small moves = large losses</li>
+            <li>• Emotional decisions amplify</li>
+          </ul>
+          <p class="text-slate-300 mt-4">Example: A 1% move against you with 100x leverage = account wipeout</p>
+        </div>
+      </div>
+
+      <!-- Section 9: Winning Strategy Myth -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">9. The Myth of "Winning Strategy"</h2>
+        <p class="text-slate-300">This is where most people fail mentally.</p>
+        
+        <div class="bg-slate-800 border-l-4 border-yellow-500 p-6 rounded mt-6 mb-6">
+          <p class="text-slate-100 font-semibold mb-2">They think:</p>
+          <p class="text-slate-300">"If I find the right strategy, I'll win."</p>
+          <p class="text-red-400 font-semibold mt-3">Wrong.</p>
+        </div>
+
+        <div class="bg-slate-800 p-6 rounded mb-6">
+          <p class="text-slate-100 font-semibold mb-3">Even the best traders:</p>
+          <ul class="space-y-2 text-slate-300">
+            <li>• Lose 40–60% of trades</li>
+            <li>• Focus on risk management</li>
+          </ul>
+        </div>
+
+        <div class="bg-green-900/30 border border-emerald p-6 rounded">
+          <p class="text-slate-100 font-semibold mb-3">What Actually Matters:</p>
+          <ul class="space-y-2 text-slate-300">
+            <li>• Risk per trade</li>
+            <li>• Consistency</li>
+            <li>• Psychological discipline</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 10: Real Foundation -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-50">10. The Real Foundation You Should Build</h2>
+        <p class="text-slate-300">If you're serious, your foundation should NOT be indicators, signals, or copy trading.</p>
+        <p class="text-slate-300 font-semibold mt-4">It should be:</p>
+        
+        <div class="grid gap-4 mt-8">
+          <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-emerald">
+            <h3 class="text-xl font-bold text-slate-100 mb-3">1. Macro Understanding</h3>
+            <p class="text-slate-300">Know:</p>
+            <ul class="space-y-1 text-slate-400 text-sm mt-2">
+              <li>• Interest rates</li>
+              <li>• Inflation cycles</li>
+              <li>• Central bank behavior</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-blue-400">
+            <h3 class="text-xl font-bold text-slate-100 mb-3">2. Market Structure</h3>
+            <p class="text-slate-300">Understand:</p>
+            <ul class="space-y-1 text-slate-400 text-sm mt-2">
+              <li>• Liquidity zones</li>
+              <li>• Trend vs consolidation</li>
+              <li>• Why price moves</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-yellow-500">
+            <h3 class="text-xl font-bold text-slate-100 mb-3">3. Risk Management</h3>
+            <p class="text-slate-300 font-semibold mb-2">Non-negotiable:</p>
+            <ul class="space-y-1 text-slate-400 text-sm mt-2">
+              <li>• Risk 1–2% per trade max</li>
+              <li>• Preserve capital first</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-purple-500">
+            <h3 class="text-xl font-bold text-slate-100 mb-3">4. Patience</h3>
+            <p class="text-slate-300">Most trades are low quality</p>
+            <p class="text-slate-300 mt-2">The skill is in <span class="text-emerald font-semibold">not trading</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Carousel -->
+      <div class="py-20 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-3xl font-bold text-center text-slate-50 mb-12">What Kenyan Traders Say 💬</h3>
+          <div class="relative" id="testimonial-carousel">
+            <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
+              <div class="flex-1 p-8 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 text-center max-w-md mx-4">
+                <div class="w-16 h-16 bg-gradient-to-r from-emerald to-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">🇰🇪</div>
+                <p class="text-slate-300 italic mb-6">"Finally real education! No more signal scams."</p>
+                <div class="text-emerald font-semibold">Sarah K., Nairobi</div>
+              </div>
+              <div class="flex-1 p-8 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 text-center max-w-md mx-4">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">💱</div>
+                <p class="text-slate-300 italic mb-6">"The leverage guide saved my account."</p>
+                <div class="text-emerald font-semibold">James M., Mombasa</div>
+              </div>
+              <div class="flex-1 p-8 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 text-center max-w-md mx-4">
+                <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">📈</div>
+                <p class="text-slate-300 italic mb-6">"Clear CMA broker list = peace of mind."</p>
+                <div class="text-emerald font-semibold">Amina W., Kisumu</div>
+              </div>
+            </div>
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-slate-800/50 hover:bg-slate-700 p-2 rounded-full border border-slate-600" onclick="prevTestimonial()">‹</button>
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-slate-800/50 hover:bg-slate-700 p-2 rounded-full border border-slate-600" onclick="nextTestimonial()">›</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-black border-t border-slate-800">
+        <div class="max-w-2xl mx-auto text-center">
+          <div class="inline-flex items-center px-4 py-2 bg-emerald/20 border border-emerald rounded-full mb-8">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span class="text-sm font-semibold">Join 5K+ Traders 💹</span>
+          </div>
+          <h3 class="text-3xl sm:text-4xl font-bold text-slate-50 mb-6">Get Weekly Forex Updates</h3>
+          <p class="text-xl text-slate-400 mb-12 max-w-lg mx-auto">Risk tips, CMA alerts, market analysis — delivered to your inbox.</p>
+          <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input type="email" placeholder="your.email@mpesa.co.ke" class="flex-1 px-6 py-4 bg-slate-800 border border-slate-700 rounded-xl focus:border-emerald focus:outline-none focus:ring-2 focus:ring-emerald/20 text-slate-100 placeholder-slate-500 transition-all">
+            <button class="px-8 py-4 bg-gradient-to-r from-emerald to-green-600 hover:from-emerald hover:to-green-700 text-white font-semibold rounded-xl shadow-xl hover:shadow-2xl hover:shadow-emerald/25 transition-all whitespace-nowrap">Get Updates</button>
+          </div>
+          <p class="text-sm text-slate-500 mt-4">No spam. Unsubscribe anytime. Your data is safe.</p>
+        </div>
+      </div>
+
+      <!-- Hard Truth -->
+      <div class="bg-red-900/30 border-2 border-red-500 p-8 rounded-lg">
+        <h2 class="text-3xl font-bold text-slate-50 mb-6">The Hard Truth</h2>
+
+        <p class="text-slate-300 text-lg mb-4">Forex is not a shortcut to money.</p>
+        <p class="text-slate-300 mb-4">It's:</p>
+        <ul class="space-y-2 text-slate-300 mb-6">
+          <li>• Highly competitive</li>
+          <li>• Institution-dominated</li>
+          <li>• Psychologically demanding</li>
+        </ul>
+        
+        <div class="bg-red-900 p-4 rounded mt-4">
+          <p class="text-slate-200 font-semibold mb-2">If your approach is:</p>
+          <p class="text-slate-300">• "Make quick profits"</p>
+          <p class="text-slate-300">• "Find a perfect strategy"</p>
+          <p class="text-red-400 font-bold mt-3">You will fail.</p>
+        </div>
+      </div>
+
+      <!-- Better Approach -->
+      <div class="bg-emerald/10 border-2 border-emerald p-8 rounded-lg">
+        <h2 class="text-3xl font-bold text-slate-50 mb-6">Better Approach (If You Want to Win)</h2>
+        <p class="text-slate-300 mb-6">Instead of chasing trades:</p>
+        <ol class="space-y-4 text-slate-300">
+          <li class="flex items-start">
+            <span class="text-emerald font-bold mr-3">1.</span>
+            <span>Study <span class="font-semibold">how money moves globally</span></span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-emerald font-bold mr-3">2.</span>
+            <span>Track <span class="font-semibold">central bank policies</span></span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-emerald font-bold mr-3">3.</span>
+            <span>Learn <span class="font-semibold">liquidity behavior</span></span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-emerald font-bold mr-3">4.</span>
+            <span>Trade less, but with intent</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Next Steps CTA -->
+      <div class="mt-16 p-8 bg-gradient-to-r from-emerald/10 via-slate-800 to-emerald/5 border border-emerald/30 rounded-2xl">
+        <h3 class="text-2xl font-bold text-slate-50 mb-4">Your Next Step</h3>
+        <p class="text-slate-300 mb-6">You now understand what real forex education looks like. The question is: Are you ready to learn it properly?</p>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <a href="basics.html" class="p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:border-emerald hover:bg-slate-800 transition-all text-center group">
+            <div class="text-2xl mb-2">📊</div>
+            <h4 class="font-bold text-slate-100 group-hover:text-emerald transition-colors">Master Basics</h4>
+            <p class="text-xs text-slate-400 mt-1">Pips, lots, pairs</p>
+          </a>
+          <a href="leverage.html" class="p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:border-emerald hover:bg-slate-800 transition-all text-center group">
+            <div class="text-2xl mb-2">⚖️</div>
+            <h4 class="font-bold text-slate-100 group-hover:text-emerald transition-colors">Control Risk</h4>
+            <p class="text-xs text-slate-400 mt-1">Position sizing</p>
+          </a>
+          <a href="kenya.html" class="p-4 bg-slate-800/50 border border-slate-700 rounded-lg hover:border-emerald hover:bg-slate-800 transition-all text-center group">
+            <div class="text-2xl mb-2">🇰🇪</div>
+            <h4 class="font-bold text-slate-100 group-hover:text-emerald transition-colors">Kenya Setup</h4>
+            <p class="text-xs text-slate-400 mt-1">Verified brokers</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Navigation to Other Resources -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-slate-50 mb-12 text-center">Continue Your Learning</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="basics.html" class="p-6 bg-slate-900 rounded-lg hover:bg-slate-700 transition-colors group">
+          <h3 class="text-xl font-bold text-emerald mb-2 group-hover:text-emerald-400">Forex Basics</h3>
+          <p class="text-slate-300 text-sm">Pips, lots, pairs, and core properties explained.</p>
+        </a>
+        <a href="leverage.html" class="p-6 bg-slate-900 rounded-lg hover:bg-slate-700 transition-colors group">
+          <h3 class="text-xl font-bold text-emerald mb-2 group-hover:text-emerald-400">Leverage & Risk</h3>
+          <p class="text-slate-300 text-sm">Understand leverage, position sizing, and capital preservation.</p>
+        </a>
+        <a href="kenya.html" class="p-6 bg-slate-900 rounded-lg hover:bg-slate-700 transition-colors group">
+          <h3 class="text-xl font-bold text-emerald mb-2 group-hover:text-emerald-400">🇰🇪 Kenya Guide</h3>
+          <p class="text-slate-300 text-sm">CMA-licensed brokers, M-Pesa funding, local regulations.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-emerald text-white p-3 rounded-full hover:bg-emerald-600 transition-all opacity-0 invisible">
+    ↑
+  </button>
+
+  <script>
+    let currentTestimonial = 0;
+    const testimonials = document.querySelector('#testimonial-track');
+    
+    function nextTestimonial() {
+      currentTestimonial = (currentTestimonial + 1) % 3;
+      testimonials.style.transform = `translateX(-${currentTestimonial * 33.33}%)`;
+    }
+    
+    function prevTestimonial() {
+      currentTestimonial = (currentTestimonial - 1 + 3) % 3;
+      testimonials.style.transform = `translateX(-${currentTestimonial * 33.33}%)`;
+    }
+    
+    setInterval(nextTestimonial, 5000);
+    
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Existing scripts...
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+      });
+
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      const backToTopBtn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      });
+      backToTopBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      // Progress bar
+      const progress = document.createElement('div');
+      progress.className = 'fixed top-0 left-0 h-1 bg-gradient-to-r from-emerald to-green-600 z-50 transition-all duration-300';
+      document.body.appendChild(progress);
+      window.addEventListener('scroll', () => {
+        const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        progress.style.width = scrolled + '%';
+      });
+
+      // Hero Enhancements
+      // 1. Typing effect
+      const subtitle = document.getElementById('hero-subtitle');
+      const text = '💹 Real Forex Fundamentals for Kenyan Traders';
+      let i = 0;
+      subtitle.style.visibility = 'visible';
+      const typeWriter = () => {
+        if (i < text.length) {
+          subtitle.textContent = text.slice(0, i + 1) + '|';
+          subtitle.classList.add('typing-cursor');
+          i++;
+          setTimeout(typeWriter, 100);
+        } else {
+          subtitle.textContent = text;
+          subtitle.classList.remove('typing-cursor');
+        }
+      };
+      typeWriter();
+
+      // 2. Stats counters
+      const stats = document.querySelectorAll('[data-target]');
+      const animateStats = () => {
+        stats.forEach(stat => {
+          const target = parseInt(stat.dataset.target);
+          const count = parseInt(stat.textContent);
+          const increment = target / 100;
+          if (count < target) {
+            stat.textContent = Math.floor(count + increment);
+            setTimeout(animateStats, 20);
+          } else {
+            stat.textContent = target.toLocaleString();
+          }
+        });
+      };
+      setTimeout(animateStats, 1500);
+
+      // 3. Forex Particle System
+      const canvas = document.getElementById('forex-particles');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight + 200; // Extra for scroll
+      const particles = [];
+      const pairs = ['EUR/USD', 'GBP/JPY', 'USD/CHF', 'AUD/USD', 'USD/JPY'];
+      
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.vy = Math.random() * 0.5 + 0.2;
+          this.pair = pairs[Math.floor(Math.random() * pairs.length)];
+          this.price = (1 + Math.random()).toFixed(4);
+          this.change = (Math.random() > 0.5 ? '+' : '') + (Math.random() * 0.5).toFixed(2) + '%';
+        }
+        update() {
+          this.y += this.vy;
+          if (this.y > canvas.height) {
+            this.y = -20;
+            this.x = Math.random() * canvas.width;
+          }
+        }
+        draw() {
+          ctx.save();
+          ctx.font = '10px monospace';
+          ctx.fillStyle = 'rgba(16, 185, 129, 0.8)';
+          ctx.fillText(this.pair, this.x, this.y);
+          ctx.font = '9px monospace';
+          ctx.fillStyle = this.change.startsWith('+') ? 'rgba(34, 197, 94, 0.9)' : 'rgba(239, 68, 68, 0.9)';
+          ctx.fillText(this.price + ' ' + this.change, this.x, this.y + 12);
+          ctx.restore();
+        }
+      }
+
+      for (let i = 0; i < 50; i++) particles.push(new Particle());
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      // Resize canvas
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight + 200;
+      });
+
+      // 4. Ticker animation
+      const ticker = document.getElementById('ticker');
+      let tickIndex = 0;
+      setInterval(() => {
+        tickIndex = (tickIndex + 1) % pairs.length;
+        ticker.textContent = `${pairs[tickIndex]}: ${ (1.08 + Math.random()*0.01).toFixed(4) } ${Math.random()>0.5 ? '↑':'↓'}${ (Math.random()*0.2).toFixed(2) }% | `;
+      }, 3000);
+    });
+  </script>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900 via-emerald/5 to-slate-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-emerald rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="relative max-w-2xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-slate-50 mb-4">Stay Updated</h2>
+      <p class="text-xl text-slate-300 mb-8">Get weekly insights on forex fundamentals, Kenya market updates, and real trading wisdom.</p>
+      
+      <form class="flex flex-col sm:flex-row gap-3 mb-4">
+        <input type="email" placeholder="Your email address" class="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:border-emerald focus:outline-none transition-all">
+        <button type="submit" class="btn-primary px-8 py-4 text-white rounded-lg font-bold hover:shadow-xl transition-all">
+          Subscribe
+        </button>
+      </form>
+      <p class="text-sm text-slate-400">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-950 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <svg class="w-6 h-6 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+            <span class="font-bold text-slate-50">Forex Foundations</span>
+          </div>
+          <p class="text-sm text-slate-400">Professional forex education for Kenyan traders. No hype. Pure logic.</p>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-slate-100 mb-4">Learning Path</h3>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="basics.html" class="hover:text-emerald transition-colors">Basics</a></li>
+            <li><a href="leverage.html" class="hover:text-emerald transition-colors">Leverage</a></li>
+            <li><a href="kenya.html" class="hover:text-emerald transition-colors">Kenya Guide</a></li>
+            <li><a href="analysis.html" class="hover:text-emerald transition-colors">Analysis</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-slate-100 mb-4">Resources</h3>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="tools.html" class="hover:text-emerald transition-colors">Tools</a></li>
+            <li><a href="myths.html" class="hover:text-emerald transition-colors">Myths Busted</a></li>
+            <li><a href="survival.html" class="hover:text-emerald transition-colors">Survival Guide</a></li>
+            <li><a href="getting-started.html" class="hover:text-emerald transition-colors">Get Started</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-slate-100 mb-4">Connect</h3>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li class="flex items-center"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg> hello@forexfoundations.ke</li>
+            <li class="flex items-center"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg> Nairobi, Kenya 🇰🇪</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-slate-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
+          <p>&copy; 2025 Forex Foundations Kenya. All rights reserved.</p>
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-emerald transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-emerald transition-colors">Disclaimer</a>
+            <a href="#" class="hover:text-emerald transition-colors">Terms of Service</a>
+          </div>
+        </div>
+        <p class="text-xs text-slate-500 mt-4">⚠️ Trading forex carries a high level of risk. You may lose all your capital. Past performance does not guarantee future results.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
